@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=>, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: rgb(238, 212, 220);
+            text-align: center;
+        }
+        .wlcm {
+          background-color: #f5e883;
+          border: 2px;
+          color: rgb(228, 41, 41);
+          padding: 15px 32px;
+          text-align: center;
+          display: inline-block;
+          font-size: 16px;
+          margin: 4px 2px;
+          cursor: pointer;
+          font-weight:500;
+        }
+        h1 {
+            font-family:sans-serif;
+            margin-top:2%;
+            font-size: 50px;
+            font-weight:800 ;
+            color:rgb(25, 104, 111);
+            font-style: oblique;
+            text-shadow:rgb(63, 89, 138) 1px 0 10px;
+
+        }
+        .fullpage {
+            background-color: rgb(241, 205, 162);
+        } 
+        .footer {
+            background-color:cyan ;
+            color:rgb(39, 103, 107) ;
+            position: absolute;
+            bottom: 10px;
+            left: 47%;
+            box-shadow: 5px 5px 5px rgb(140, 140, 234);
+            font-size:20px;
+        }
+        .fbd {
+            color: blue;
+        }
+        .chngbg {
+          background-color: #f5e883;
+          border: 3px;
+          color: rgb(144, 5, 5);
+          text-align:center;
+          font-weight: 200;
+          padding:5mm;
+          font-size: 16px;
+          cursor: pointer;
+          border-radius: 50px;
+          text-size-adjust: 20%;
+          float: left;
+        }
+        .chnghding{
+          transform: translate(-50%,-50%);
+          float: right;
+          font-size: 16px;
+          background-color: #f5e883;
+          color:rgb(201, 35, 52);
+          display: inline;
+          padding:5mm;
+          cursor: pointer;
+          border-radius: 50px;
+          text-size-adjust: 20%;
+          border: 0;
+          font-weight:200;
+        }
+        .clock{
+            background-color:rgb(134, 249, 207) ;
+            color:rgb(39, 103, 107) ;
+            position: absolute;
+            right: 130px;
+            bottom:25%;
+            font-size: 200%;
+            font-weight: 400;
+            
+        }
+        </style>
+</head>
+    <div class="fullpage">
+        <body>
+    
+           <h1 id="hd1">
+           WELCOME TO MY HOMEPAGE  
+           </h1>
+   
+           <nav>
+                <button onclick="wlcmmsg()" class="wlcm">CLICK HERE </button>
+
+           </nav>
+           <P><i><strong> Officially</strong> the Republic of India (Hindi: Bhārat Gaṇarājya),[25] is a country in South Asia. It is the seventh-largest country by area, the second-most populous country, and the most populous democracy in the world. Bounded by the Indian Ocean on the south, the Arabian Sea on the southwest, and the Bay of Bengal on the southeast, it shares land borders with Pakistan to the west;[f] China, Nepal, and Bhutan to the north; and Bangladesh and Myanmar to the east. In the Indian Ocean, India is in the vicinity of Sri Lanka and the Maldives; its Andaman and Nicobar Islands share a maritime border with Thailand, Myanmar, and Indonesia.
+
+           Modern humans arrived on the Indian subcontinent from Africa no later than 55,000 years ago.[26][27][28] Their long occupation, initially in varying forms of isolation as hunter-gatherers, has made the region highly diverse, second only to Africa in human genetic diversity.[29] Settled life emerged on the subcontinent in the western margins of the Indus river basin 9,000 years ago, evolving gradually into the Indus Valley Civilisation of the third millennium BCE.[30] By 1200 BCE, an archaic form of Sanskrit, an Indo-European language, had diffused into India from the northwest.[31][32] Its evidence today is found in the hymns of the Rigveda. Preserved by a resolutely vigilant oral tradition, the Rigveda records the dawning of Hinduism in India.[33] The Dravidian languages of India were supplanted in the northern and western regions.[34] By 400 BCE, stratification and exclusion by caste had emerged within Hinduism,[35] and Buddhism and Jainism had arisen, proclaiming social orders unlinked to heredity.[36] Early political consolidations gave rise to the loose-knit Maurya and Gupta Empires based in the Ganges Basin.[37] Their collective era was suffused with wide-ranging creativity,[38] but also marked by the declining status of women,[39] and the incorporation of untouchability into an organised system of belief.[g][40] In South India, the Middle kingdoms exported Dravidian-languages scripts and religious cultures to the kingdoms of Southeast Asia</i></P>
+          <nav> 
+            <button onclick="changebackground()" class="chngbg">CHANGE BACKGROUND</button>
+            <br><button onclick="changeheading()" class="chnghding">CHANGE HEADING</button>
+          </nav>
+          <div class="clock">DATE:<span id="dt"></span><br>
+                   TIME:<span id="tym"></span>
+          </div>
+          <footer>
+          <div class="footer">
+          <div class="fhding">CONTACT</div>
+          <div class="fbd">Jivan Jyoti Giri<br>
+                           122CS0307
+          </div>
+    </div>
+    </footer>
+    <SCRIPT>
+        function changeheading()
+        {
+            setTimeout(()=> {
+        document.getElementById('hd1').innerText="HELLO EVERYONE";
+            },5000);
+        }
+        function changebackground()
+        {
+            document.body.style.backgroundColor='rgb(209, 173, 173)';
+        
+        }
+        function wlcmmsg()
+        {
+            prompt("WELCOME MESSAGE","WELCOME!");
+        }
+        let x,y,z;
+        setInterval(()=>
+        {
+            x=new Date();
+            dt=x.toLocaleDateString();
+            tym=x.getHours()+ '-'+x.getMinutes() + '-'+ x.getSeconds();
+            document.getElementById('dt').innerHTML=dt;
+            document.getElementById('tym').innerHTML=tym;
+        },1000);
+        
+    </SCRIPT>
+
+</body>
+</div>
+</html>
